@@ -59,13 +59,18 @@
 						* 2013年 新卒入社
 						* サーバーサイドエンジニア
 						* ゆるドラシルの運営・開発
-						* **6年間ほぼPHP漬け**
 					</script>
 				</section>
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						### **Elixirにふれる経緯**
+						## **Elixirにふれることになった経緯**
+					</script>
+				</section>
+
+				<section data-markdown data-background-type="light">
+					<script type="text/template">
+						### **きっかけ**
 						* チャット作って！
 						* マイクロサービスで！
 						* 自由にやって！
@@ -75,44 +80,21 @@
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						<img src="./lib/image/downloads/thinking-face.png">
-					</script>
-				</section>
-
-				<section data-markdown data-background-type="light">
-					<script type="text/template">
-						一部KPIプロジェクトなどでElixirを使ってたし
-						### **「便乗すっか！」**
-					</script>
-				</section>
-
-				<section data-markdown data-background-type="light">
-					<script type="text/template">
-						### **アジェンダ**
-						* Elixirとは
-						* 変数
-						* パターンマッチ
-						* 関数
-						* 関数型言語
-						* 軽量プロセス
-					</script>
-				</section>
-
-				<section data-markdown data-background-type="light">
-					<script type="text/template">
 						### **Elixirとは**
+						* 関数型プログラミング
 						* ErlangVM上で動く
-						* Rubyに似てる
-						* 関数型言語
-						* 対話モード(iex)便利
+						* スケールしやすい
+						* 耐障害性が高い(フォールトトレラント)
+						* 拡張しやすい
 					</script>
 				</section>
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						### **変数**
+						### **not 代入**
 						* ✕: 代入 ◯: 束縛(bind)
-						* 再代入のような動きはするが再代入ではない
+						* 代入: 式中の文字に、ある特定の値を与えること。
+						* 束縛: 値に対して、ラベルを貼り付けること。
 
 						<pre><code style="background-color: #45413C; color: #FEF5E2; max-height: 450px;">iex> a = 10
 						iex> b = fn -> IO.puts a end
@@ -189,7 +171,7 @@
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						## **同名の関数 - ガード句 -**
+						## **同名の関数 - ガード -**
 						* *when* を用いて軽いハンドリングが可能
 
 						<pre><code style="background-color: #45413C; color: #FEF5E2; max-height: 450px;">defmodule Hoge do
@@ -234,7 +216,7 @@
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						## 軽量プロセス
+						## 並行性
 						* 簡単に並行処理を実装できます(spawnとかTaskとか)
 						* ErlangVMのおかげで信頼性が高い
 
@@ -252,19 +234,13 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-type="light">
-					<script type="text/template">
-						## と、いうわけで
-					</script>
-				</section>
-
 				<section data-markdown data-background-type="green">
 					<script type="text/template">
 						## 使ってみた所感
 						* 関数型言語は楽しい
 						* パターンマッチは中毒性が高い
 						* 並行処理が簡単
-						* 英語の記事か2015年の記事ばかり…
+						* 英語の記事が多い…
 						* だが、いいぞ
 					</script>
 				</section>
