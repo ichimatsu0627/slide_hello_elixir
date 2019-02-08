@@ -84,8 +84,7 @@
 						* 関数型プログラミング
 						* ErlangVM上で動く
 						* スケールしやすい
-						* 耐障害性が高い(フォールトトレラント)
-						* 拡張しやすい
+						* 耐障害性が高い
 					</script>
 				</section>
 
@@ -103,6 +102,22 @@
 						iex> a = 20
 						iex> b.()
 						<mark>10</mark>
+						</code></pre>
+					</script>
+				</section>
+
+				<section data-markdown data-background-type="light">
+					<script type="text/template">
+						### **パターンマッチ**
+						* = (マッチ演算子)
+						* 関数にも使える
+
+						<pre><code style="background-color: #45413C; color: #FEF5E2; max-height: 450px;">iex> a = 10 #=> 10
+						iex> 10 = a #=> 10
+						iex> [x, y, z] = [1, 2, 3]
+						iex> x #=> 1
+						iex> y #=> 2
+						iex> z #=> 3						
 						</code></pre>
 					</script>
 				</section>
@@ -133,7 +148,7 @@
 					<script type="text/template">
 						## **同名の関数 - Arity -**
 						* 引数の数が違えば、別関数扱い
-						* これをArityというらしいです
+						* これをArityというらしい
 
 						<pre><code style="background-color: #45413C; color: #FEF5E2; max-height: 450px;">defmodule Hoge do
 						    def fuga(), do: 0
@@ -189,11 +204,11 @@
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						## 関数型言語
+						## **関数型プログラミング言語**
 						* R.I.P. deep nested
 
 						<pre><code style="background-color: #45413C; color: #FEF5E2; max-height: 450px;">defmodule Hoge do
-						    defp validate(value) when is_integer(value), do:{:ok}
+						    defp validate(value) when is_integer(value), do: {:ok}
 						    defp validate(_), do: {:error, reason: "value is not integer"}
 	
 						    defp output({:ok}, value), do: IO.puts value
@@ -215,9 +230,9 @@
 
 				<section data-markdown data-background-type="light">
 					<script type="text/template">
-						## 並行性
+						## **並行性**
 						* 簡単に並行処理を実装できる(spawnとかTaskとか)
-						* 信頼性が高い
+						* ErlangVM内のプロセスが軽量
 
 						<pre><code style="background-color: #45413C; color: #FEF5E2; max-height: 450px;">defmodule Hoge do
 						    def fuga(a, b) do
@@ -230,6 +245,16 @@
 						3
 						iex> Process.alive?(pid) #=> false
 						</code></pre>							
+					</script>
+				</section>
+
+				<section data-markdown data-background-type="light">
+					<script type="text/template">
+						## **Elixirを使うメリット**
+						* 拡張性
+						* 耐障害性
+						* ErlangVMの信頼性
+						* フレームワーク「Phoenix」
 					</script>
 				</section>
 
